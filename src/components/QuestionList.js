@@ -19,7 +19,7 @@ class QuestionList extends Component {
           }}
         />
         {Object.values(questions).map(question => (
-          <div className="card" key={question.id}>
+          <div className="card question" key={question.id}>
             <h3 className="card-header">Would you rather ...?</h3>
             <div className="card-body">
               <button className="btn btn-success option">
