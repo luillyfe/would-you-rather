@@ -1,0 +1,35 @@
+.card-body {
+    display: flex;
+}
+
+.card-body .btn:first-child {
+    margin-right: auto;
+}
+
+.card-body .btn {
+    margin-left: .25rem;
+}
+
+.card-header, .card-footer {
+    text-align: center;
+    background-color: #fff;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.card {
+    margin-top: .5rem;
+    border-color: #28a745;
+}
+
+.option {
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+}
+
+.question {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
