@@ -4,19 +4,6 @@ import "./questionList.css";
 import { connect } from "react-redux";
 
 class QuestionList extends Component {
-  state = {
-    style: {}
-  };
-
-  componentDidMount() {
-    var style = { ...this.state.style };
-
-    style.width = this.props.progression;
-    style.transition = "all 500ms ease-in";
-
-    this.setState({ style });
-  }
-
   render() {
     const { questions } = this.props;
 

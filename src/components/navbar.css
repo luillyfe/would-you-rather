@@ -1,0 +1,18 @@
+a {
+    color: #28a745
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0c3214;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: #28a745;
+}
+
+.navbar {
+    border: 1px solid #28a745;
+    border-radius: .25rem;
+    background-color: #fff!important;
+}

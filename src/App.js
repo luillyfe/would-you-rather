@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import QuestionList from "./components/QuestionList";
 import { connect } from "react-redux";
 import { initialData } from "./actions/shared";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   componentDidMount() {
@@ -10,11 +12,15 @@ class App extends Component {
   }
 
   render() {
-    const { questions } = this.props;
     return (
-      <div className="container mt-3">
-        <QuestionList questions={questions} />
-      </div>
+      <Router>
+        <div className="container mt-3">
+          <Navbar />
+          <div>
+            <Route path="/" exact component={QuestionList} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }
