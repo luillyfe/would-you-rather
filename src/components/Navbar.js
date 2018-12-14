@@ -1,13 +1,22 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "./navbar.css"
+import "./navbar.css";
+import { connect } from "react-redux";
 
 class Navbar extends Component {
   render() {
+    const { authedUser } = this.props;
+    console.log(authedUser);
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <NavLink to="/" exact activeClassName="active">
           Home
+        </NavLink>
+        <NavLink to="/user">
+          <div className="text-center">
+            <img src={authedUser.avatarURL} className="avatar" alt="avatar" />
+          </div>
+          {authedUser.name}
         </NavLink>
         <button
           className="navbar-toggler"
@@ -25,4 +34,10 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+const mapStateToProps = state => {
+  const authedUser = state.authedUser ? state.authedUser : "Sign In";
+
+  return { authedUser };
+};
+
+export default connect(mapStateToProps)(Navbar);
